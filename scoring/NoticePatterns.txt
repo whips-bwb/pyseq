@@ -1,0 +1,56 @@
+notice for patterns : 
+- respect the format (headers + instrument's parts)
+- resolution are 8 or 16 only 
+- representation of steps/hits :
+    x normal hit 
+    X accented hit
+    o alternate sound (openHH, Open triangle, ... )
+    O alternate accented 
+    - no hit (but must be present for counting) 
+
+score symbols : 
+- 'A1x2' means repeating the pattern 2 times 
+- adding special patterns/modes :
+    '00' is 'normal play' : play exactly what is in the score 
+    '01' is 'constrained random' : play sometimes (according to tension factor ?) some displaced or removed elements
+    '02' is 'full random' : based on signature, play what you want ...  
+    '+X' is 'raise TF' : incrementing the Tension Factor (complex pattern evolving) by 0.X
+    '-X' is 'lower TF' : decrementing the Tension Factor (simpler pattern evolving) by 0.x
+a global Events dict is produced before launching to report events and their position (starting measure) 
+Tension Factor is evolving between -1 and +1 (0 average) 
+
+---------------------------------------------
+
+New Approach for Rules
+1️⃣ Adaptive Window Size (TF-Based)
+
+The higher the tension factor, the larger the window for replacement (e.g., 1-note at 0.1, 4-note at 0.8).
+
+This prevents tiny TF changes from having drastic effects while allowing bigger shifts to be noticeable.
+
+2️⃣ Signature-Aware Adjustments
+
+For 4/4, changes occur in 2, 4, or 8 note blocks (binary).
+
+For 6/8 or triplets, modifications happen in 3 or 6 note groupings (ternary).
+
+This keeps the groove intact.
+
+3️⃣ Dynamic Replacement Rules
+
+Rules vary depending on TF (not just static sets).
+
+Lower TF: Small shifts (adding offbeats, mild variations).
+
+Higher TF: More aggressive changes (doubling notes, denser grooves).
+
+4️⃣ Instrument-Specific Nuances
+
+BD (Kick): Keep solid pulse, add syncopation, ghost notes.
+
+SD (Snare): Add backbeat emphasis, flams, ghost hits.
+
+HH (HiHat): Open/close variations, subtle polyrhythms.
+
+Cymbals: Enhance accents, spread variations naturally.
+

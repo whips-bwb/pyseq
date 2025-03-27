@@ -1,0 +1,9 @@
+# Reference: W1
+# Name: WorldJazz
+# Signature: 6/8
+# Bars: 1
+# Resolution: 8
+BD: X-----
+SD: --x---
+HH: x--o--
+TR: Oxxoxx
