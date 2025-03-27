@@ -29,7 +29,7 @@ def launch_synth():
         #launch automatically the FluidSynth instance locally
         print(f"\n{YELLOW}launching FluidSynth instance !{RESET}")
         synth_process = subprocess.Popen(
-            ["fluidsynth", "-a", "alsa", "-f ", "scoring/FSconfig.txt" , "-m", "alsa_seq",  "/usr/share/sounds/sf2/FluidR3_GM.sf2"],
+            ["fluidsynth", "-a", "alsa", "-f", "scoring/FSconfig.txt" , "-m", "alsa_seq",  "/usr/share/sounds/sf2/FluidR3_GM.sf2"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             stdin=subprocess.PIPE

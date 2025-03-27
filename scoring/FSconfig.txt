@@ -1,1 +1,10 @@
-select 10 1 128 032
+select 9 1 128 032
+
+# drums sounds 
+# 000 -> 007 standard kits 
+# 008 -> 15 room kits
+# 016 -> 019 power kit 
+# 032 -> 036 jazz kits 
+# 041,042 brush kits 
+# 025 TR808
+

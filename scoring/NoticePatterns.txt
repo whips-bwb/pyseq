@@ -54,3 +54,36 @@ HH (HiHat): Open/close variations, subtle polyrhythms.
 
 Cymbals: Enhance accents, spread variations naturally.
 
+
+SOUND BANKS : 
+128-000 Standard
+128-001 Standard 1
+128-002 Standard 2
+128-003 Standard 3
+128-004 Standard 4
+128-005 Standard 5
+128-006 Standard 6
+128-007 Standard 7
+128-008 Room
+128-009 Room 1
+128-010 Room 2
+128-011 Room 3
+128-012 Room 4
+128-013 Room 5
+128-014 Room 6
+128-015 Room 7
+128-016 Power
+128-017 Power 1
+128-018 Power 2
+128-019 Power 3
+128-024 Electronic
+128-025 TR-808
+128-032 Jazz
+128-033 Jazz 1
+128-034 Jazz 2
+128-035 Jazz 3
+128-036 Jazz 4
+128-040 Brush
+128-041 Brush 1
+128-042 Brush 2
+
