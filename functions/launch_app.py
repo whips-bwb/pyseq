@@ -88,7 +88,13 @@ def get_seq_params():
 def load_score(time_signature):
     # Load patterns from a file named from the user's input 
     patterns_file_name = time_signature.replace('/', '_') + '_patterns.txt'
-    patterns_lib = quick_import_patterns(f'./scoring/{patterns_file_name}')  
+    patterns_file_path = f'./scoring/{patterns_file_name}'
+    try:
+        patterns_lib = quick_import_patterns(patterns_file_path)
+    except FileNotFoundError:
+        print(f"{RED}⚠️ Warning: Pattern file '{patterns_file_name}' not found. Using default patterns or exiting.{RESET}")
+        patterns_lib = {}  # Or provide a fallback mechanism
+        return
     
     if not scoring.sequence.main_sequence:
         print(f"{RED} No valid pattern sequence found. Exiting. {RESET}")
