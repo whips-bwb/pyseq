@@ -1,0 +1,9 @@
+# Reference: A2
+# Name: BasicRock2
+# Signature: 7/4
+# Bars: 4
+# Resolution: 16
+BD: X-------x---x-X-x---X-----X
+SD: ----X--X-X--X---o---x--x-X-  
+HH: X-x-x-X-x-x-X-XxXxx-x-X-x-x
+RC: --X---x-x-X---x---X---x-x-X
