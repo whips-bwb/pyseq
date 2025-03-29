@@ -1,7 +1,7 @@
 import time
 import mido
 import scoring.settings  # Import the whole module
-from functions.check_tf import trigger_events
+from functions.check_tf import update_tf
 from functions.modify_pattern import modify_pattern  # Import the modification function
 
 # Function to play a pattern using MIDI output

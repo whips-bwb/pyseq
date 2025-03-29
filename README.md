@@ -11,3 +11,12 @@ this program is very simple and focuses on pattern modifications using rules to 
 python only, 
 mido module for midi messaging
 that's all folks, enjoy !
+
+TODO :
+- add the pattern complexity analyzer and relevant code 
+- integrate the TF adjust in sequence
+- relate TF modifs & delta to line modif
+- test & fine tune 
+
+https://chatgpt.com/c/67e45192-3df0-8001-aa52-8f7753b45fc6
+middle of the page (find Concept Overview: and after ... )
