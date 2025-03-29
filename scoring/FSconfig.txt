@@ -8,23 +8,24 @@ select 9 1 128 032
 # 041,042 brush kits 
 # 025 TR808
 
-# Audio settings
-audio.driver=alsa
+# Audio settings (try changing periods/period_size if problems max 8/256)
+audio.driver=pulseaudio
 audio.periods=2
-audio.period-size=256
+audio.period-size=128
 audio.realtime=yes
 
 # Sample rate and buffer
 synth.sample-rate=44100
 synth.cpu-cores=2
-synth.polyphony=64
-synth.dynamic-sample-loading=yes
+synth.polyphony=32
+synth.dynamic-sample-loading=no
 synth.threadsafe-api=yes
+synth.preload=1          # Preload soundfont samples for smoother startup
 
-# Latency optimization
-audio.jack.autoconnect=yes
-audio.jack.multi=yes
-audio.jack.id=fluidsynth
-audio.alsa.device=default
-audio.alsa.periods=2
-audio.alsa.period-size=128
+# Latency optimization (try changing periods/period_size if problems)
+#audio.jack.autoconnect=yes
+#audio.jack.multi=yes
+#audio.jack.id=fluidsynth
+#audio.alsa.device=default
+#audio.alsa.periods=2
+#audio.alsa.period-size=128

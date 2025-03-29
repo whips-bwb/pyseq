@@ -67,6 +67,80 @@ def modify_line_with_randomness(line, rules, instrument):
 
     return modified_result
 
+# -------------- NEWLY ADDED FCT 
+
+# Function to modify a pattern based on its complexity and TF
+def modify_pattern_by_complexity(pattern, complexity_scores, tf_delta, resolution=16):
+    """
+    Modify the pattern based on its complexity and TF delta.
+    
+    :param pattern: The current pattern (dict of instrument lines).
+    :param complexity_scores: Complexity scores for each line.
+    :param tf_delta: The change in tension factor (negative to simplify, positive to complexify).
+    :param resolution: Resolution of the pattern (default 16).
+    :return: A modified pattern.
+    """
+    modified_pattern = pattern.copy()  # Create a copy of the pattern to modify
+
+    # Sort lines by complexity score
+    sorted_lines = sorted(complexity_scores.items(), key=lambda x: x[1])
+
+    if tf_delta > 0:
+        # Complexify the pattern: Focus on simplifying simpler lines
+        for instrument, score in sorted_lines:
+            if score < 0.5:  # Focus on lines with low complexity
+                modified_pattern[instrument] = complexify_line(modified_pattern[instrument], resolution)
+            if tf_delta > 0.5:  # Stronger TF delta means more complexification
+                modified_pattern[instrument] = add_variation(modified_pattern[instrument], resolution)
+    elif tf_delta < 0:
+        # Simplify the pattern: Focus on reducing complexity on complex lines
+        for instrument, score in sorted_lines:
+            if score > 0.7:  # Focus on lines with high complexity
+                modified_pattern[instrument] = simplify_line(modified_pattern[instrument])
+
+    return modified_pattern
+
+def complexify_line(line, resolution=16):
+    """
+    Adds complexity to a line by introducing more rhythmic variety or additional hits.
+    :param line: The line to complexify.
+    :param resolution: The resolution of the pattern (default 16).
+    :return: A more complex version of the line.
+    """
+    # Example: Add more hits in random places (you could also introduce rhythmic variation)
+    line_list = list(line)
+    for i in range(resolution):
+        if random.random() < 0.2:  # 20% chance to add a hit in a random position
+            line_list[i] = 'X'
+    return ''.join(line_list)
+
+def simplify_line(line):
+    """
+    Simplifies a line by removing hits or making rhythms more basic.
+    :param line: The line to simplify.
+    :return: A simpler version of the line.
+    """
+    line_list = list(line)
+    for i in range(len(line_list)):
+        if random.random() < 0.3:  # 30% chance to remove a hit
+            line_list[i] = '-'
+    return ''.join(line_list)
+
+def add_variation(line, resolution=16):
+    """
+    Adds rhythmic variation to a line.
+    :param line: The line to modify.
+    :param resolution: The resolution of the pattern (default 16).
+    :return: A more varied version of the line.
+    """
+    # Example: Change the position of existing hits for variation
+    line_list = list(line)
+    for i in range(resolution):
+        if line_list[i] == 'X' and random.random() < 0.4:
+            new_pos = random.randint(0, resolution-1)
+            line_list[new_pos] = 'X'
+            line_list[i] = '-'
+    return ''.join(line_list)
 
 
 
