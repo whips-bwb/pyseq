@@ -94,7 +94,7 @@ def load_score_and_patterns(time_signature):
     try:
         patterns_lib = quick_import_patterns(patterns_file_path)
     except FileNotFoundError:
-        print(f"{RED}⚠️ Warning: Pattern file '{patterns_file_name}' not found.{RESET}")
+        print(f"{RED}⚠️ Warning: Pattern file '{patterns_file_name}' not found. Using default patterns or exiting.{RESET}")
         patterns_lib = {}  # Or provide a fallback mechanism
         return
     
