@@ -157,7 +157,7 @@ def evolve_pattern(pattern, complexity_data, tf, rules=None):
     evolved_pattern = pattern.copy()
     
     for instrument, line in pattern.items():
-        current_complexity = complexity_data.get(instrument, 0)
+        current_complexity = complexity_data[1].get(instrument, 0)
         
         if rules and instrument in rules:
             # Apply rule-based modification

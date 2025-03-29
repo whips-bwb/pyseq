@@ -10,6 +10,7 @@ from functions.playPattern import play_pattern
 from functions.import_sequence import import_sequence
 from functions.display import *
 from functions.analysis import analyze_pattern_complexity
+from functions.modify_pattern import evolve_pattern
 
 
 def launch_app():
@@ -88,7 +89,6 @@ def get_seq_params():
 
 
 def load_score_and_patterns(time_signature):
-    # Load patterns from a file named from the user's input 
     patterns_file_name = time_signature.replace('/', '_') + '_patterns.txt'
     patterns_file_path = f'./scoring/{patterns_file_name}'
     try:
@@ -97,24 +97,31 @@ def load_score_and_patterns(time_signature):
         print(f"{RED}⚠️ Warning: Pattern file '{patterns_file_name}' not found.{RESET}")
         patterns_lib = {}  # Or provide a fallback mechanism
         return
-    # if sequence/score is missing ... 
+    
     if not scoring.sequence.main_sequence:
         print(f"{RED} No valid pattern sequence found. Exiting. {RESET}")
         return
-    # Analyze complexity for each pattern
+    
     analyzed_patterns_lib = {}
     for name, pattern in patterns_lib.items():
         complexity_data = analyze_pattern_complexity(pattern)
+        evolved_pattern = evolve_pattern(pattern, complexity_data, scoring.settings.tension_factor)
+        
+        # Make sure we preserve metadata
+        evolved_pattern['metadata'] = pattern.get('metadata', {'Bars': 0, 'Resolution': 16})
+        
         analyzed_patterns_lib[name] = {
-            "pattern": pattern,
-            "complexity": complexity_data  # Store complexity alongside pattern
+            "pattern": evolved_pattern,
+            "complexity": complexity_data
         }
-            
-    pattern_sequence = import_sequence(scoring.sequence.main_sequence, patterns_lib)
-    # if patterns in sequence/score doesn't match with patterns in the lib/
+    
+    # Generate sequence using evolved patterns
+    pattern_sequence = import_sequence(scoring.sequence.main_sequence, analyzed_patterns_lib)
+
     if not verify_patterns_presence(pattern_sequence, patterns_lib):
         print(f"{RED}⚠️ Some patterns are missing. Please check your pattern files.{RESET}")
         return
+    
     return analyzed_patterns_lib, patterns_lib, pattern_sequence
 
 
