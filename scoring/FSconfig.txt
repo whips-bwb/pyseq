@@ -1,0 +1,31 @@
+select 9 1 128 032
+
+# drums sounds 
+# 000 -> 007 standard kits 
+# 008 -> 15 room kits
+# 016 -> 019 power kit 
+# 032 -> 036 jazz kits 
+# 041,042 brush kits 
+# 025 TR808
+
+# Audio settings (try changing periods/period_size if problems max 8/256)
+audio.driver=pulseaudio
+audio.periods=2
+audio.period-size=128
+audio.realtime=yes
+
+# Sample rate and buffer
+synth.sample-rate=44100
+synth.cpu-cores=2
+synth.polyphony=32
+synth.dynamic-sample-loading=no
+synth.threadsafe-api=yes
+synth.preload=1          # Preload soundfont samples for smoother startup
+
+# Latency optimization (try changing periods/period_size if problems)
+#audio.jack.autoconnect=yes
+#audio.jack.multi=yes
+#audio.jack.id=fluidsynth
+#audio.alsa.device=default
+#audio.alsa.periods=2
+#audio.alsa.period-size=128

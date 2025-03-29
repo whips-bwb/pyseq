@@ -1,0 +1,89 @@
+notice for patterns : 
+- respect the format (headers + instrument's parts)
+- resolution are 8 or 16 only 
+- representation of steps/hits :
+    x normal hit 
+    X accented hit
+    o alternate sound (openHH, Open triangle, ... )
+    O alternate accented 
+    - no hit (but must be present for counting) 
+
+score symbols : 
+- 'A1x2' means repeating the pattern 2 times 
+- adding special patterns/modes :
+    '00' is 'normal play' : play exactly what is in the score 
+    '01' is 'constrained random' : play sometimes (according to tension factor ?) some displaced or removed elements
+    '02' is 'full random' : based on signature, play what you want ...  
+    '+X' is 'raise TF' : incrementing the Tension Factor (complex pattern evolving) by 0.X
+    '-X' is 'lower TF' : decrementing the Tension Factor (simpler pattern evolving) by 0.x
+a global Events dict is produced before launching to report events and their position (starting measure) 
+Tension Factor is evolving between -1 and +1 (0 average) 
+
+---------------------------------------------
+
+New Approach for Rules
+1️⃣ Adaptive Window Size (TF-Based)
+
+The higher the tension factor, the larger the window for replacement (e.g., 1-note at 0.1, 4-note at 0.8).
+
+This prevents tiny TF changes from having drastic effects while allowing bigger shifts to be noticeable.
+
+2️⃣ Signature-Aware Adjustments
+
+For 4/4, changes occur in 2, 4, or 8 note blocks (binary).
+
+For 6/8 or triplets, modifications happen in 3 or 6 note groupings (ternary).
+
+This keeps the groove intact.
+
+3️⃣ Dynamic Replacement Rules
+
+Rules vary depending on TF (not just static sets).
+
+Lower TF: Small shifts (adding offbeats, mild variations).
+
+Higher TF: More aggressive changes (doubling notes, denser grooves).
+
+4️⃣ Instrument-Specific Nuances
+
+BD (Kick): Keep solid pulse, add syncopation, ghost notes.
+
+SD (Snare): Add backbeat emphasis, flams, ghost hits.
+
+HH (HiHat): Open/close variations, subtle polyrhythms.
+
+Cymbals: Enhance accents, spread variations naturally.
+
+
+SOUND BANKS : 
+128-000 Standard
+128-001 Standard 1
+128-002 Standard 2
+128-003 Standard 3
+128-004 Standard 4
+128-005 Standard 5
+128-006 Standard 6
+128-007 Standard 7
+128-008 Room
+128-009 Room 1
+128-010 Room 2
+128-011 Room 3
+128-012 Room 4
+128-013 Room 5
+128-014 Room 6
+128-015 Room 7
+128-016 Power
+128-017 Power 1
+128-018 Power 2
+128-019 Power 3
+128-024 Electronic
+128-025 TR-808
+128-032 Jazz
+128-033 Jazz 1
+128-034 Jazz 2
+128-035 Jazz 3
+128-036 Jazz 4
+128-040 Brush
+128-041 Brush 1
+128-042 Brush 2
+

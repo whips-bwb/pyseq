@@ -1,0 +1,37 @@
+# Reference: A0
+# Name: TestTracks
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---------------
+    
+# Reference: A1
+# Name: BasicRock1
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X-------X-------
+SD: ----o-------X---
+HH: X-x-X-x-X-x-X-x-
+RC: --X---x---X---x-
+
+# Reference: A2
+# Name: BasicRock2
+# Signature: 4/4
+# Bars: 4
+# Resolution: 16
+BD: X-------x---x-X-x---X-----X-o-X-X-------x---x-X-x---X-----X-o-X-
+SD: ----X--X-X--X---o---x--x-X--Xx------X--X-X--X---o---x--x-X--Xx--  
+HH: X-x-x-X-x-x-X-XxXxx-x-X-x-x-X-O-X-x-x-X-x-x-X-XxXxx-x-X-x-x-X-O-
+RC: --X---x-x-X---x---X---x-x-X---x---X---x-x-X---x---X---x-x-X---x-
+
+# Reference: F1
+# Name: BasicRockFill1
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X-----x-X--X-x-X
+SD: ----x-------X-X-
+HH: X-x-X-x-X-x-XxxX
+RC: --X---x---X---x-
+
