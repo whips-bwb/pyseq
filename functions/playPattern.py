@@ -1,7 +1,7 @@
 import time
 import mido
 import scoring.settings  # Import the whole module
-from functions.check_events import trigger_events
+from functions.check_tf import trigger_events
 from functions.modify_pattern import modify_pattern  # Import the modification function
 
 # Function to play a pattern using MIDI output
@@ -78,4 +78,4 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
                 midi_output_port.send(mido.Message('note_off', note=midi_note, velocity=velocity, channel=channel))
 
     scoring.settings.global_bar_counter += nb_bars  # add these bars to counter 
-    trigger_events()
+    update_tf()

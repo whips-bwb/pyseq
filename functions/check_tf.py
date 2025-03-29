@@ -1,7 +1,7 @@
 import scoring.settings
 from functions.display import *
 
-def trigger_events():
+def update_tf():
     """
     Checks if the current global_bar_counter matches any scheduled event
     and triggers it.
