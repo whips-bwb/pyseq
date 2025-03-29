@@ -142,5 +142,46 @@ def add_variation(line, resolution=16):
             line_list[i] = '-'
     return ''.join(line_list)
 
+import random
+
+def evolve_pattern(pattern, complexity_data, tf, rules=None):
+    """
+    Modifies the current pattern based on the tension factor (TF) and predefined rules.
+    
+    :param pattern: dict containing instrument patterns.
+    :param complexity_data: dict containing complexity values per instrument.
+    :param tf: float, tension factor (-1 to 1) dictating simplification or complexification.
+    :param rules: dict, optional specific rules for modification.
+    :return: dict, modified pattern.
+    """
+    evolved_pattern = pattern.copy()
+    
+    for instrument, line in pattern.items():
+        current_complexity = complexity_data.get(instrument, 0)
+        
+        if rules and instrument in rules:
+            # Apply rule-based modification
+            evolved_pattern[instrument] = apply_rule_modification(line, rules[instrument])
+        else:
+            # Apply constrained random evolution
+            evolved_pattern[instrument] = apply_random_modification(line, tf, current_complexity)
+    
+    return evolved_pattern
+
+def apply_rule_modification(line, rule):
+    """Applies a predefined rule to modify a pattern line."""
+    # Implement rule-based modification logic here
+    return rule  # Placeholder, modify based on actual rule format
+
+def apply_random_modification(line, tf, complexity):
+    """Applies a constrained random transformation to the pattern line."""
+    new_line = list(line)
+    probability = abs(tf) * (1 - complexity)  # More impact where complexity is lower
+    
+    for i in range(len(new_line)):
+        if random.random() < probability:
+            new_line[i] = 'X' if new_line[i] == '-' else '-'
+    
+    return ''.join(new_line)
 
 
