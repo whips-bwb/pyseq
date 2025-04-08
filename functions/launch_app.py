@@ -91,6 +91,7 @@ def load_score_and_patterns(time_signature):
     patterns_file_name = time_signature.replace('/', '_') + '_patterns.txt'
     patterns_file_path = f'./scoring/{patterns_file_name}'
     try:
+        # patterns_libs holds the entire file with all saved patterns
         patterns_lib = quick_import_patterns(patterns_file_path)
     except FileNotFoundError:
         print(f"{RED}⚠️ Warning: Pattern file '{patterns_file_name}' not found.{RESET}")
@@ -100,22 +101,10 @@ def load_score_and_patterns(time_signature):
     if not scoring.sequence.main_sequence:
         print(f"{RED} No valid pattern sequence found. Exiting. {RESET}")
         return
-    
+    # pattern_sequence holds only the relevant patterns with their relevant length (and no TF changes) 
     pattern_sequence = import_sequence(scoring.sequence.main_sequence, patterns_lib)
-    # if patterns in sequence/score doesn't match with patterns in the lib/
-    if not verify_patterns_presence(pattern_sequence, patterns_lib):
-        print(f"{RED}⚠️ Some patterns are missing. Please check your pattern files.{RESET}")
-        return
-    return patterns_lib, pattern_sequence
 
-# in fact not really needed as missing patterns will be truncated in the score ... 
-def verify_patterns_presence(pattern_sequence, patterns_lib):
-    missing_patterns = [pattern for pattern in pattern_sequence if pattern not in patterns_lib]
-    
-    if missing_patterns:
-        print(f"{RED}⚠️ Warning: The following patterns are missing from the library: {missing_patterns}{RESET}")
-        return False
-    return True
+    return patterns_lib, pattern_sequence
 
 
 def start_sequencer(tempo, time_signature, midi_out_handler, synth_instance, patterns_libs, score):

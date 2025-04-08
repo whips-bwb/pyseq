@@ -7,4 +7,4 @@
 #main_sequence = ['A0', '+2', 'A0','+2','A0', '+2','A0', '+2', 'A0', '-8'] # used with test pattern
 #main_sequence = ['A2', 'A2'] # simple loop of 2x4 mes
 
-main_sequence = ['A1', '+0', 'A1','+0','A1', '+0','A1', '+0', 'A1', '-0'] # used with test pattern
+main_sequence = ['A1x2', '+0', 'A2','+0','A1', '+0','A1', '+0', 'F1', '-0'] # used with test pattern
