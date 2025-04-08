@@ -2,8 +2,10 @@
 global_bar_counter = 1
 event_index = 0
 tension_factor = 0.0
+previous_tension_factor = 0.0
 sequence_size = 0
 global_events = []
+last_played_pattern_ref = ''
 
 low_velo = 80
 hi_velo = 120

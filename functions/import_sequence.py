@@ -1,6 +1,7 @@
 import re
 import scoring.settings
 from functions.display import *
+from pprint import pprint
 
 def import_sequence(pattern_sequence, patterns):
     """
@@ -60,6 +61,8 @@ def import_sequence(pattern_sequence, patterns):
     scoring.settings.sequence_size = event_bar_counter - 1
     # debug infos 
     print(f"{BLUE}SEQUENCE:\n{GREEN}Size(bars): {YELLOW}{scoring.settings.sequence_size}\n{GREEN}Expanded Sequence: {YELLOW}{expanded_sequence}")
-    print(f"{GREEN}Global Events: {YELLOW}{scoring.settings.global_events}{RESET}")
+    print(f"{GREEN}Global Events: {YELLOW}")
+    pprint(scoring.settings.global_events)
+    print(f"{RESET}")
 
     return expanded_sequence

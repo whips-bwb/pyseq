@@ -7,4 +7,14 @@
 #main_sequence = ['A0', '+2', 'A0','+2','A0', '+2','A0', '+2', 'A0', '-8'] # used with test pattern
 #main_sequence = ['A2', 'A2'] # simple loop of 2x4 mes
 
-main_sequence = ['A1x2', '+0', 'A2','+0','A1', '+0','A1', '+0', 'F1', '-0'] # used with test pattern
+# basic pattern with cnstant TF raise
+#main_sequence = ['A1', '+2', 'A1', '+2', 'A1', '+2', 'A1' ,'+2', 'A1', '-2', 'A1', '-2', 'A1' ,'-2', 'A1', '-4'] # used with test pattern
+
+# main sequence with TF changes 
+#main_sequence = ['A1', '+2', 'A1','+2','A1', '-6','F1', '+2'] # used with test pattern
+
+# main sequence WITHOUT TF changes 
+#main_sequence = ['A1', '+0', 'A1','+0','A1', '+0','F1', '-0'] # used with test pattern
+
+main_sequence = ['A1', 'A1', '+3', 'A1', 'A1' ,'-3', 'A1', 'A1', 'A1' , 'A1' ] # used with test pattern
+

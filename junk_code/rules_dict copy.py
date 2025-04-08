@@ -4,7 +4,7 @@ rules = {
     'complexify': {
         'mild': {
             'general': [
-                 ("X---------------", "X-------X-------"),  # Kick to double hit
+                 ("X-------X-------", "X---X---X---X---"),  # Kick to double hit
             ],
             'instrument_specific': {
                 'BD': [
@@ -13,32 +13,27 @@ rules = {
         },
         'medium': {
             'general': [
-
+                ("X-------X-------", "X---X-x-X---X-x-"),
             ],
             'instrument_specific': {
                 'BD': [
-                    ("X-------X-------", "X-------X---X---")
                 ],
                 'SD': [
-
                 ],
                 'HH': [
-
                 ]
             }
         },
         'strong': {
             'general': [
+                 ("X-------X-------", "X-x-X-x-X-x-X-x-"),
             ],
             'instrument_specific': {
                 'BD': [
-                    ("X-------X---X---", "X---X---X---X---")
                 ],
                 'SD': [
-
                 ],
                 'HH': [
-
                 ]
             }
         }

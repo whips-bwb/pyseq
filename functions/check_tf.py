@@ -1,3 +1,4 @@
+import scoring.sequence
 import scoring.settings
 from functions.display import *
 
@@ -23,9 +24,10 @@ def update_tf():
     for event in scoring.settings.global_events:
         if event['at_bar'] % scoring.settings.sequence_size == absolute_loop_bar:
             if event['type'].startswith(('+', '-')):  # Detect tension factor events
+                scoring.settings.previous_tension_factor = scoring.settings.tension_factor
                 scoring.settings.tension_factor += event['value']
                 scoring.settings.tension_factor = round(scoring.settings.tension_factor, 2)  # Round to 2 decimals
 
-            print(f"{GREEN}⚡ EVENT TRIGGERED: {YELLOW}{event['type']} {RESET}at bar {RED}{current_bar}{RESET}              ")
+            print(f"{BGgreen}⚡ EVENT TRIGGERED {RESET} : {YELLOW}{event['type']} {RESET}at bar {RED}{current_bar}{RESET}              ")
 
 

@@ -3,7 +3,8 @@
 # Signature: 4/4
 # Bars: 1
 # Resolution: 16
-BD: X---------------
+BD: ----------------
+SD: X-------X-------
     
 # Reference: A1
 # Name: BasicRock1

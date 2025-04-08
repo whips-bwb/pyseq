@@ -116,7 +116,7 @@ def start_sequencer(tempo, time_signature, midi_out_handler, synth_instance, pat
                 if pattern_ref in patterns_libs:
                     pattern = patterns_libs[pattern_ref]
                     # Call the function to play the pattern
-                    print(f"{BLUE}Bar {YELLOW}{scoring.settings.global_bar_counter}{RESET}:\t\t {BLUE}Pattern {GREEN}{pattern_ref} \tTF : {RED}{scoring.settings.tension_factor}{RESET}", end="\n") #\r to return 
+                    print(f"{BLUE}Bar {YELLOW}{scoring.settings.global_bar_counter}{RESET}:\t\t {BLUE}Pattern {GREEN}{pattern_ref} \tTF : {RED}{scoring.settings.tension_factor} \t {YELLOW} prev : {scoring.settings.previous_tension_factor} {RESET}", end="\n") #\r to return 
                     play_pattern(pattern, tempo, midi_out_handler, channel=9)
                 else:
                     print(f"{RED}Pattern {pattern_ref} not found in the loaded patterns.{RESET}")
