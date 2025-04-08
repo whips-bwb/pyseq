@@ -1,5 +1,6 @@
 import random
 import re
+import scoring.settings
 
 def modify_pattern(pattern, rules):
     """
@@ -60,11 +61,11 @@ def stochastic_modify_line(line, direction, strength='mild'):
     steps = list(line)
     indices = list(range(len(steps)))
 
-    # Define probabilities for adding/removing hits
+    # Define probabilities for adding/removing hits (start vars 2,4,6)
     levels = {
-        'mild': 2,
-        'medium': 4,
-        'strong': 6
+        'mild': scoring.settings.stochastic_lo,
+        'medium': scoring.settings.stochastic_mid,
+        'strong': scoring.settings.stochastic_hi
     }
     num_changes = levels.get(strength, 2)
 

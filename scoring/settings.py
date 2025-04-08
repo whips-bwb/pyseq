@@ -6,9 +6,13 @@ previous_tension_factor = 0.0
 sequence_size = 0
 global_events = []
 last_played_pattern_ref = ''
-
-low_velo = 80
+# low and hi velocity for midi notes 
+low_velo = 70
 hi_velo = 120
+# number of notes to be replaced in stochastic function 'modify_pattern' (3 levels)
+stochastic_lo = 1
+stochastic_mid = 3
+stochastic_hi = 5 
 
 instrument_mapping = {
     'BD': 35,   # Bass Drum

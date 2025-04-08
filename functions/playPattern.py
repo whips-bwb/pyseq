@@ -15,19 +15,16 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
     Plays a pattern using MIDI output where all instruments play simultaneously at each step.
     The `midi_output_port` is the opened MIDI output port.
     """
-    update_tf()
+    
+    current_pattern = copy.deepcopy(pattern)
     # Access the global tension_factor directly from scoring.settings if TF != 0
     tension_factor = round(scoring.settings.tension_factor ,2) # Access the tension_factor here
     previous_tension_factor = round(scoring.settings.previous_tension_factor,2)  # Store the previous TF value (you might need to store this in scoring.settings)
     delta_tf = round(tension_factor - previous_tension_factor, 2)
     print("dTF : ", delta_tf)
-    #selected_rules = {}
-    #current_complexity, current_inst_complexity = analyze_pattern_complexity(pattern)
-    #print("PATTERN COMPLEXITY : ", current_complexity, current_inst_complexity )
-    #print(pattern)
     # do nothing if TF is zero (ALSO ADD the DELTA TF == 0)
     if tension_factor == 0:
-        current_pattern = pattern.copy()  
+        pass
     else:  
         if delta_tf != 0:
             if delta_tf > 0:
@@ -42,24 +39,16 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
             )
             print("MOTION : " , "dTF : " , delta_tf , " dir : " , direction , " lvl : ", level )
             
-            for instrument, line_dict in pattern['instruments'].items():
+            for instrument, line_dict in current_pattern['instruments'].items():
                 if 'steps' in line_dict:
                     old_line = line_dict['steps']
                     new_line = stochastic_modify_line(old_line, direction, level)
-                    pattern['instruments'][instrument]['steps'] = new_line
-        current_pattern = pattern #reassign modified pattern 
+                    current_pattern['instruments'][instrument]['steps'] = new_line
         #pprint(current_pattern)
-        
     # Set up time between steps based on tempo (BPM)
     step_duration = 60 / (tempo * int(current_pattern['metadata']['Signature'].split("/")[1]))  
     nb_bars = int(current_pattern['metadata']['Bars'])
     num_steps = len(current_pattern['instruments']['SD']['steps'])
-
-    # Add debug to check the selected rules based on tension factor
-    # IN FACT this is wrong, as a positive tension factor doesn't mean complexify ...
-    # IT should be the difference from the previous TF ... augmenting or decreasing 
-    # the current value of the TF should be used only to say if the pattern is already complex or simple 
-    #print(f"Tension Factor: {tension_factor}")
 
     # Loop through the steps of the pattern
     for step_idx in range(num_steps):
@@ -103,7 +92,8 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
             midi_note = scoring.settings.instrument_mapping.get(instrument)
             if midi_note:
                 midi_output_port.send(mido.Message('note_off', note=midi_note, velocity=0, channel=channel))
-
+                
+    update_tf()
     scoring.settings.global_bar_counter += nb_bars  # add these bars to counter 
     scoring.settings.last_played_pattern_ref = current_pattern['metadata']['Reference'] # indicate last played pattern
     

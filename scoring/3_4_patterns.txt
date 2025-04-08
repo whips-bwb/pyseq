@@ -1,3 +1,13 @@
+# Reference: A1
+# Name: ternary BasicRock1
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X-----------
+SD: --------X---
+HH: X---x---x---
+RC: ------------
+
 # Reference: A2
 # Name: ternary BasicRock1
 # Signature: 3/4
