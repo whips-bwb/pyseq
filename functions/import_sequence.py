@@ -14,7 +14,7 @@ def import_sequence(pattern_sequence, patterns):
         scoring.settings.global_events = []  # Initialize if not already present
 
     # Matches '00', '01', etc.
-    two_digit_pattern = re.compile(r'^\d{2}$')  
+    pattern_reference = re.compile(r'^[A-Z]\d{2}$') 
     # Detect +y or -y patterns (e.g., "+4" or "-6")
     tension_pattern = re.compile(r'^[+-](\d)$')  
 
@@ -32,7 +32,7 @@ def import_sequence(pattern_sequence, patterns):
             })        
 
         # **Case 1: Special Patterns (Mode Change or Tension Change)**
-        if two_digit_pattern.match(entry):
+        if pattern_reference.match(entry):
             scoring.settings.global_events.append({
                 'type': entry,
                 'at_bar': event_bar_counter  # Store current bar position + 1 for Xth starting bar (the next one) 
