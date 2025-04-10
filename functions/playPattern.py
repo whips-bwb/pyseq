@@ -2,7 +2,6 @@ import time
 import mido
 import scoring.settings  # Import the whole module
 import scoring.rules_dict
-from functions.check_tf import update_tf
 from functions.modify_pattern import modify_pattern, stochastic_modify_line  # Import the modification function
 from functions.analysis import analyze_pattern_complexity
 from pprint import pprint
@@ -15,13 +14,13 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
     Plays a pattern using MIDI output where all instruments play simultaneously at each step.
     The `midi_output_port` is the opened MIDI output port.
     """
-    
+
     current_pattern = copy.deepcopy(pattern)
     # Access the global tension_factor directly from scoring.settings if TF != 0
     tension_factor = round(scoring.settings.tension_factor ,2) # Access the tension_factor here
     previous_tension_factor = round(scoring.settings.previous_tension_factor,2)  # Store the previous TF value (you might need to store this in scoring.settings)
     delta_tf = round(tension_factor - previous_tension_factor, 2)
-    print("dTF : ", delta_tf)
+    #print("dTF : ", delta_tf)
     # do nothing if TF is zero (ALSO ADD the DELTA TF == 0)
     if tension_factor == 0:
         pass
@@ -37,7 +36,7 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
                 'medium' if dtf_abs <= 0.7 else
                 'strong'
             )
-            print("MOTION : " , "dTF : " , delta_tf , " dir : " , direction , " lvl : ", level )
+            #print("MOTION : " , "dTF : " , delta_tf , " dir : " , direction , " lvl : ", level )
             
             for instrument, line_dict in current_pattern['instruments'].items():
                 if 'steps' in line_dict:
@@ -93,7 +92,7 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
             if midi_note:
                 midi_output_port.send(mido.Message('note_off', note=midi_note, velocity=0, channel=channel))
                 
-    update_tf()
+
     scoring.settings.global_bar_counter += nb_bars  # add these bars to counter 
     scoring.settings.last_played_pattern_ref = current_pattern['metadata']['Reference'] # indicate last played pattern
     

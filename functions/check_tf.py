@@ -17,10 +17,16 @@ def update_tf():
     # Get current global bar count
     current_bar = scoring.settings.global_bar_counter
 
-    # Compute absolute position in the sequence
+    # Compute absolute position in the sequence (in case of looping)
     absolute_loop_bar = current_bar % scoring.settings.sequence_size
 
-    # Check all events and trigger those that match the absolute bar position
+    # Special case: if absolute_loop_bar == 0 and not the first bar, interpret it as end of sequence
+    if absolute_loop_bar == 0 and current_bar != 0:
+        sequence_index = scoring.settings.sequence_size - 1
+    else:
+        sequence_index = absolute_loop_bar
+
+    # Check all events and trigger those that match the current sequence index
     for event in scoring.settings.global_events:
         if event['at_bar'] % scoring.settings.sequence_size == absolute_loop_bar:
             if event['type'].startswith(('+', '-')):  # Detect tension factor events
@@ -29,5 +35,3 @@ def update_tf():
                 scoring.settings.tension_factor = round(scoring.settings.tension_factor, 2)  # Round to 2 decimals
 
             print(f"{BGgreen}⚡ EVENT TRIGGERED {RESET} : {YELLOW}{event['type']} {RESET}at bar {RED}{current_bar}{RESET}              ")
-
-

@@ -9,7 +9,7 @@ from functions.quick_import_patterns import quick_import_patterns
 from functions.playPattern import play_pattern
 from functions.import_sequence import import_sequence
 from functions.display import *
-
+from functions.check_tf import update_tf
 
 def launch_app():
     # first launch a synth instance (FluidSynth or Qsynth)
@@ -115,6 +115,8 @@ def start_sequencer(tempo, time_signature, midi_out_handler, synth_instance, pat
             for pattern_ref in score:
                 if pattern_ref in patterns_libs:
                     pattern = patterns_libs[pattern_ref]
+                    #update the tension factor values before playing 
+                    update_tf()
                     # Call the function to play the pattern
                     print(f"{BLUE}Bar {YELLOW}{scoring.settings.global_bar_counter}{RESET}:\t\t {BLUE}Pattern {GREEN}{pattern_ref} \tTF : {RED}{scoring.settings.tension_factor} \t {YELLOW} prev : {scoring.settings.previous_tension_factor} {RESET}", end="\n") #\r to return 
                     play_pattern(pattern, tempo, midi_out_handler, channel=9)
@@ -122,7 +124,7 @@ def start_sequencer(tempo, time_signature, midi_out_handler, synth_instance, pat
                     print(f"{RED}Pattern {pattern_ref} not found in the loaded patterns.{RESET}")
             
             # After all patterns in the sequence are played, the loop will restart
-            print(f"{BLUE}Looping the sequence ... {RESET}                   ")
+            print(f"{BLUE}\nLooping the sequence {RED}{'.' * 30} {RESET} \n")
 
         except KeyboardInterrupt:
             print(f"\n{RED}Stopping Sequencer, Script & Synth...{RESET}")

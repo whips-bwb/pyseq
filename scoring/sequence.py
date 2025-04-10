@@ -16,5 +16,5 @@
 # main sequence WITHOUT TF changes 
 #main_sequence = ['A1', '+0', 'A1','+0','A1', '+0','F1', '-0'] # used with test pattern
 
-main_sequence = ['A1x2', '+3', 'A1x2', '+3', 'A1x2' , '+3' ,  'A1x2', '-3', 'A1x2', '-3', 'A1x2' , '-3'  ] # used with test pattern
+main_sequence = ['A1x2', '+3', 'A1x2', '+3', 'A1x2' , '-3', 'A1x2', '-3', 'A1x2'  ] # used with test pattern
 

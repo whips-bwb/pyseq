@@ -13,10 +13,9 @@ mido module for midi messaging
 that's all folks, enjoy !
 
 TODO :
-- add the pattern complexity analyzer and relevant code 
-- integrate the TF adjust in sequence
+- trigger not only with delta TF (combine with absolute TF + delta)
 - relate TF modifs & delta to line modif
-- test & fine tune 
+- test & fine tune (modifify params on the fly ....)
 
 https://chatgpt.com/c/67e45192-3df0-8001-aa52-8f7753b45fc6
 middle of the page (find Concept Overview: and after ... )
