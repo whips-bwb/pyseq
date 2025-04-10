@@ -69,14 +69,7 @@ def stochastic_modify_line(line, direction, strength='mild', density_zone='neutr
         'strong': scoring.settings.stochastic_hi
     }.get(strength, 2)
 
-    # Modifier based on density_zone
-    density_mod = {
-        'very_sparse': 1.5,
-        'sparse': 1.2,
-        'neutral': 1.0,
-        'dense': 0.8,
-        'very_dense': 0.5
-    }.get(density_zone, 1.0)
+    density_mod = scoring.settings.tension_zone_multipliers.get(density_zone, 1.0)
 
     num_changes = max(1, round(base_changes * density_mod))
 

@@ -29,17 +29,21 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
         )
 
         # Absolute TF density zone
-        if tension_factor >= 0.7:
+        if tension_factor >= 0.9:
+            density_zone = 'ultra_dense'
+        elif tension_factor >= 0.6:
             density_zone = 'very_dense'
         elif tension_factor >= 0.3:
             density_zone = 'dense'
         elif tension_factor >= -0.3:
             density_zone = 'neutral'
-        elif tension_factor >= -0.7:
+        elif tension_factor >= -0.9:
             density_zone = 'sparse'
         else:
             density_zone = 'very_sparse'
-        print(f"{BGred}DIR : {direction}, LVL : {level},  Tzone : {density_zone}{RESET}")
+            
+        print(f"DIR : {PURPLE} {direction} {RESET}, LVL : {PURPLE} {level} {RESET},  Tzone : {PURPLE} {density_zone} {RESET}")
+        
         for instrument, line_dict in current_pattern['instruments'].items():
             if 'steps' in line_dict:
                 old_line = line_dict['steps']

@@ -10,9 +10,19 @@ last_played_pattern_ref = ''
 low_velo = 70
 hi_velo = 120
 # number of notes to be replaced in stochastic function 'modify_pattern' (3 levels)
-stochastic_lo = 1
-stochastic_mid = 3
-stochastic_hi = 5 
+stochastic_lo = 1   # ie mild 
+stochastic_mid = 3  # ie medium 
+stochastic_hi = 5   # strong
+# for tension zones  
+tension_zone_multipliers = {
+    'very_sparse': 1.5,
+    'sparse': 1.3,
+    'light': 1.15,
+    'neutral': 1.0,
+    'dense': 0.85,
+    'very_dense': 0.7,
+    'ultra_dense': 0.55
+}
 
 instrument_mapping = {
     'BD': 35,   # Bass Drum
