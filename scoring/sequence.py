@@ -25,7 +25,8 @@
 # strong moves 
 # main_sequence = ['A1x2', '+9', 'A1x2', '-9', '-9' , 'A1x2' , '+9', 'A1x2'] # used with test pattern
 
+# play all pattern sequence of one type 
+# main_sequence = ['A3x4','A4x4','A5x4','A6x4','A7x4', 'A8x4','A9x4','A10x4'] # simple loop of 2x4 mes
+# main_sequence = ['B1x4','B2x4','B3x4','B4x4','B5x4', 'B6x4','B7x4','B8x4','B9x4','B10x4']
 
-main_sequence = ['A3x4','A4x4','A5x4','A6x4','A7x4'] # simple loop of 2x4 mes
-
-# main_sequence = ['A3']
+main_sequence = ['B5' , '+1' , 'A0']

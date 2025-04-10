@@ -17,3 +17,103 @@ BD: X-------x---x-X-x---X-----X
 SD: ----X--X-X--X---o---x--x-X-  
 HH: X-x-x-X-x-x-X-XxXxx-x-X-x-x
 RC: --X---x-x-X---x---X---x-x-X
+
+# Reference: B1
+# Name: Balkan Stretch
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X-----X---X---X-----
+SD: ----o-------o-------o-------
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ----x---x-------x-------x---
+
+# Reference: B2
+# Name: Ethio Roll
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-----X-----X---X-------
+SD: ------o-------o-------o-----
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: --x-------x-------x------x--
+
+# Reference: B3
+# Name: Eastern Cycle
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X-------X---X-----X-----X---
+SD: ----o---------o--------o----
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: --x-----x--------x------x---
+
+# Reference: B4
+# Name: Sufi March
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X-----X---X-----X---
+SD: ----o-------o-------o-------
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ------x-------x--------x----
+
+# Reference: B5
+# Name: Persian Groove
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X-----X---------
+SD: ------o-------o-------o-----
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: --x-------x--------x------x-
+
+# Reference: B6
+# Name: Nomad Line
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-----X---X-----X-------
+SD: ----o-------o--------o------
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ----x---x-------x------x----
+
+# Reference: B7
+# Name: Anatolian Turn
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X-----X---X-----X---X-------
+SD: ------o-------o--------o----
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ----x-------x--------x------
+
+# Reference: B8
+# Name: Spiral Dance
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-----X---X---X---------
+SD: ----o-------o--------o------
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ------x-------x------x------
+
+# Reference: B9
+# Name: Middle Path
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---X-----------
+SD: ------o-------o--------o----
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ----x-------x--------x------
+
+# Reference: B10
+# Name: Oriental Loop
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X-----X---X---X-----
+SD: ----o-------o--------o------
+HH: x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+RC: --x-------x--------x------x-

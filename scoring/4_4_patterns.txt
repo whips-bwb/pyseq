@@ -38,3 +38,104 @@ SD: ----x-------X-X-
 HH: X-x-X-x-X-x-XxxX
 RC: --X---x---X---x-
 
+# Reference: B1
+# Name: BasicRock1
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---x---X---x---
+SD: ----o-----o-----
+HH: X-x-x-x-x-x-x-x-
+RC: ----x---x---x---
+
+# Reference: B2
+# Name: FunkyBeat
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X-x---X-x---X---
+SD: ----o---o-------
+HH: X-x-x-x-x-x-x-x-
+RC: --x-----x----x---
+
+# Reference: B3
+# Name: DanceGroove
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---
+SD: ----o-----o-----
+HH: X-x-x-x-x-x-x-x-
+RC: ----x-----x-----
+
+# Reference: B4
+# Name: RockBeats
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---
+SD: ----o-----o-----
+HH: X---x-x---x-x---
+RC: ----x-x-----x---
+
+# Reference: B5
+# Name: ElectroGroove
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X-x---X-x---X---
+SD: ----o---o-------
+HH: X-x-x---x-x-x---
+RC: --x---x-x---x---
+
+# Reference: B6
+# Name: MinimalBeat
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---
+SD: ----o-----o-----
+HH: X---x-x-x-x-x---
+RC: ----x----x-----
+
+# Reference: B7
+# Name: DeepGroove
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X-x---X-x---X---
+SD: ----o---o-------
+HH: X---x---x---x---
+RC: ----x-x-----x---
+
+# Reference: B8
+# Name: ProgressiveBeats
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---
+SD: ----o-----o-----
+HH: X-x---x-x---x---
+RC: ----x---x---x---
+
+# Reference: B9
+# Name: HybridRhythm
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---
+SD: ----o-----o-----
+HH: X---x---x-x-x---
+RC: ----x---x-x---
+
+# Reference: B10
+# Name: SyncopatedGroove
+# Signature: 4/4
+# Bars: 1
+# Resolution: 16
+BD: X---x---X---x---
+SD: ----o-----o-----
+HH: X-x-x-x-X-x-x-x-
+RC: ----x----x----x-
+
+

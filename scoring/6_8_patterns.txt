@@ -17,3 +17,105 @@ BD: X-----
 SD: --x---
 HH: x--o--
 TR: Oxxoxx
+
+# Reference: B1
+# Name: Afro Pulse
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---
+SD: ----o-------
+HH: x-x-x-x-x-x-
+RC: ----x-----x-
+
+# Reference: B2
+# Name: Sahara Swing
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X-----X-----
+SD: ----o---o---
+HH: x-x-x-x-x-x-
+RC: --x-----x---
+
+# Reference: B3
+# Name: Andean Triplet
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X-------
+SD: ------o---o-
+HH: x-x-x-x-x-x-
+RC: ----x-----x-
+
+# Reference: B4
+# Name: Balkan Groove
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X-------
+SD: ----o---o---
+HH: x-x-x-x-x-x-
+RC: --x-----x---
+
+# Reference: B5
+# Name: Caribbean Flow
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X-------
+SD: ------o---o-
+HH: x-x-x-x-x-x-
+RC: ----x-----x-
+
+# Reference: B6
+# Name: Gnawa Drive
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---
+SD: ----o-------
+HH: x-x-x-x-x-x-
+RC: --x-----x---
+
+# Reference: B7
+# Name: Tzigane Hop
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X-----X---X-
+SD: ----o-------
+HH: x-x-x-x-x-x-
+RC: ----x-----x-
+
+# Reference: B8
+# Name: AfroCuban Twist
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X-------
+SD: ------o---o-
+HH: x-x-x-x-x-x-
+RC: --x-----x---
+
+# Reference: B9
+# Name: Desert Skips
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X-------
+SD: ----o---o---
+HH: x-x-x-x-x-x-
+RC: ----x-----x-
+
+# Reference: B10
+# Name: Tribal Waltz
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---
+SD: ------o---o-
+HH: x-x-x-x-x-x-
+RC: --x-----x---
+
+

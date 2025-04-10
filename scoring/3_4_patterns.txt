@@ -77,3 +77,35 @@ BD: X-----X----X
 SD: ----o----x--
 HH: X---x---x-x-
 RC: --x---x---x-
+
+# Reference: A8
+# Name: ternary RockProgression1
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X--X-
+SD: ----o---o--x
+HH: X-x-x-x-x-x-
+RC: --x------x--
+
+# Reference: A9
+# Name: ternary Groove2
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---
+SD: ----o---o--
+HH: X-x---x---x
+RC: --x---x---x
+
+# Reference: A10
+# Name: ternary FastRock
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X---X--X-x--
+SD: ----o-----o-
+HH: X---x---x---
+RC: --x--x----x-
+
+

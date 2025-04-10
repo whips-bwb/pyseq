@@ -17,3 +17,103 @@ BD: X-------x---x-X-x---
 SD: ----X--X-X--X---o---  
 HH: X-x-x-X-x-x-X-XxXxx-
 RC: --X---x-x-X---x---X-
+
+# Reference: B1
+# Name: Quintuple Groove 1
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---X---
+SD: ----o-------o----o--
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x-------x-------x-
+
+# Reference: B2
+# Name: Quintuple Groove 2
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X-----X-------X---X-
+SD: ----o-----o------o--
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x-------x------x--
+
+# Reference: B3
+# Name: Quintuple Funk
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X-X-----X---
+SD: ----o-------o-------
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: ----x-------x-----x-
+
+# Reference: B4
+# Name: Quintuple Pulse
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X-------
+SD: ----o-------o-----o-
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x-x-------x-x-----
+
+# Reference: B5
+# Name: Quintuple Shuffle
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X-----X-----X-----X-
+SD: ----o-------o----o--
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x-----x-----x-----
+
+# Reference: B6
+# Name: Prog Quintet
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-------X-X-----
+SD: ----o-----o------o--
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x-x-----x-----x---
+
+# Reference: B7
+# Name: Tight 5
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X-X---X---X---X-----
+SD: ----o---o-------o---
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x----x----x-----x-
+
+# Reference: B8
+# Name: Skippy Five
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-----X---X-----
+SD: ------o-----o-----o-
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: --x--x-----x---x----
+
+# Reference: B9
+# Name: Sync Five
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X-------
+SD: ----o-----o-----o---
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: ----x----x----x-----
+
+# Reference: B10
+# Name: Flowing Quintet (Revised)
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-----X---X---X-
+SD: ----o-------o---o---
+HH: x-x-x-x-x-x-x-x-x-x-
+RC: ----x----x-----x----
