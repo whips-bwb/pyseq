@@ -33,5 +33,9 @@ def update_tf():
                 scoring.settings.previous_tension_factor = scoring.settings.tension_factor
                 scoring.settings.tension_factor += event['value']
                 scoring.settings.tension_factor = round(scoring.settings.tension_factor, 2)  # Round to 2 decimals
-
+            else: # if not a TF modifier, it is a mode changer
+                scoring.settings.global_mode = event['type']
+                scoring.settings.global_mode_value = event['value']
+                # now do the relevant thing .... 
+            
             print(f"{GREEN}⚡ EVENT TRIGGERED {RESET} : {BGyellow} {event['type']} {RESET} at bar {BGyellow} {current_bar} {RESET}              ")

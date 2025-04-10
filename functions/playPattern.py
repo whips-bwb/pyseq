@@ -10,8 +10,16 @@ from functions.display import *
 
 # Function to play a pattern using MIDI output
 def play_pattern(pattern, tempo, midi_output_port, channel):
-    import copy
     current_pattern = copy.deepcopy(pattern)
+    
+    # main mapping of modes/functions (adapt it to have new modes) (see line 58) 
+    mode_functions = {
+        'stoch': stochastic_modify_line,
+        #'rand': random_modify_line,
+        #'full_random': full_random_modify_line,
+        #'some_other_mode': some_other_mode_modify_line,
+    }
+    modify_line_function = mode_functions.get(scoring.settings.global_mode, None)
     
     tension_factor = round(scoring.settings.tension_factor, 2)
     previous_tension_factor = round(scoring.settings.previous_tension_factor, 2)
@@ -47,7 +55,8 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
         for instrument, line_dict in current_pattern['instruments'].items():
             if 'steps' in line_dict:
                 old_line = line_dict['steps']
-                new_line = stochastic_modify_line(old_line, direction, level, density_zone, instrument)
+                # attention : depending on functions , params will not be the same ???? 
+                new_line = modify_line_function(old_line, direction, level, density_zone, instrument)
                 current_pattern['instruments'][instrument]['steps'] = new_line
 
     # Play MIDI pattern

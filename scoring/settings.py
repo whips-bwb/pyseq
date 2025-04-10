@@ -5,10 +5,15 @@ tension_factor = 0.0
 previous_tension_factor = 0.0
 sequence_size = 0
 global_events = []
+global_mode = ''
+global_mode_value = 0
 last_played_pattern_ref = ''
 # low and hi velocity for midi notes 
 low_velo = 70
 hi_velo = 120
+
+# global vars specific to modes/methods 
+
 # number of notes to be replaced in stochastic function 'modify_pattern' (3 levels)
 stochastic_lo = 1   # ie mild 
 stochastic_mid = 3  # ie medium 

@@ -1,7 +1,9 @@
 # REMINDER : 
-# 'A1x3' means pattern multiplier,  ALWAYS use A0 as a blank pattern
-# '+1' or '-3' means +0.1 or minus 0.3 to TF , 
-# '00', '01' ... ar MODES changes
+# 'A0' is the mandatory BLANK pattern (with no notes), to be used to end score and avoid TF 
+# 'A1' means a single pattern play 
+# 'A1x3' means pattern multiplier,
+# '+1' or '-3' means +0.1 or minus 0.3 to TF (never to be at the end of the score, always use A0 after the last) 
+# 'stoch(0.3)', 'rand(0.5)', mode_name(param) ... are MODES changes : name + param
 
 #pattern_sequence = ['W1', 'W1'] # used with 6/8 
 # main_sequence = ['A0', '+2', 'A0','+2','A0', '+2','A0', '+2', 'A0', '-8'] # used with test pattern
@@ -29,4 +31,6 @@
 # main_sequence = ['A3x4','A4x4','A5x4','A6x4','A7x4', 'A8x4','A9x4','A10x4'] # simple loop of 2x4 mes
 # main_sequence = ['B1x4','B2x4','B3x4','B4x4','B5x4', 'B6x4','B7x4','B8x4','B9x4','B10x4']
 
-main_sequence = ['B5' , '+1' , 'A0']
+# exemple with mode changes 
+#main_sequence = ['stoch(0.4)', 'B5' , 'rand(0.7)', '+1' , 'rules(0.9)', 'A0']
+main_sequence = ['stoch(0.4)', '+7' , 'A1' , '-7' , 'A0']
