@@ -17,7 +17,7 @@
 #main_sequence = ['A1', '+0', 'A1','+0','A1', '+0','F1', '-0'] # used with test pattern
 
 # with progressive moves
-# main_sequence = ['A1x2', '+3', 'A1x2', '+3', 'A1x2' , '+3', 'A1x2' , '-3', 'A1x2', '-3', 'A1x2' , '-3', 'A1x2' , ] # used with test pattern
+main_sequence = ['A1x2', '-9', 'A1x2', '+9' , '+9' , 'A1x2', ] # used with test pattern
 
 #   TF value :            -3            +3            0               +3            0              +3
 #main_sequence = ['A1x2', '-3', 'A1x2', '+6', 'A1x2' , '-3', 'A1x2' , '+3', 'A1x2', '-3', 'A1x2' , '+3', 'A1x2' ] # used with test pattern

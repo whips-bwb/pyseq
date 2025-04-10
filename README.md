@@ -16,6 +16,7 @@ TODO :
 
 - test & fine tune (modifify params on the fly ....)
 - test with odd signatures 
+- implement modes to change modif logic 
 
 https://chatgpt.com/c/67e45192-3df0-8001-aa52-8f7753b45fc6
 middle of the page (find Concept Overview: and after ... )

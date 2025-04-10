@@ -47,7 +47,7 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
         for instrument, line_dict in current_pattern['instruments'].items():
             if 'steps' in line_dict:
                 old_line = line_dict['steps']
-                new_line = stochastic_modify_line(old_line, direction, level, density_zone)
+                new_line = stochastic_modify_line(old_line, direction, level, density_zone, instrument)
                 current_pattern['instruments'][instrument]['steps'] = new_line
 
     # Play MIDI pattern

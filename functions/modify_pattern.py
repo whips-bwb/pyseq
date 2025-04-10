@@ -48,21 +48,27 @@ def modify_line_with_randomness(line, rules, instrument):
     #print(f"Modified line ({instrument}): {line}\n")  # Debug
     return line
 
-def stochastic_modify_line(line, direction, strength='mild', density_zone='neutral'):
+
+def stochastic_modify_line(line, direction, strength='mild', density_zone='neutral', instrument='default'):
     """
-    Applies a stochastic modification to a line of drum steps.
+    Applies a stochastic modification to a line of drum steps, allowing for instrument-specific modification allowances.
+    
     :param line: 16-step pattern (e.g., 'X---x---X---x---')
     :param direction: 'complexify' or 'simplify'
     :param strength: 'mild', 'medium', or 'strong'
     :param density_zone: 'very_sparse' to 'very_dense'
+    :param instrument: Name of the instrument being modified (for specific allowance control)
     :return: modified pattern string
     """
-    import random
     active_hits = {'x', 'X', 'o', 'O'}
     steps = list(line)
     indices = list(range(len(steps)))
+    
 
-    # Adjust number of changes based on strength + density_zone
+    # Get the allowance for the instrument
+    allowance = scoring.settings.instrument_allowances.get(instrument, scoring.settings.instrument_allowances['default'])
+
+    # Adjust number of changes based on strength and density_zone
     base_changes = {
         'mild': scoring.settings.stochastic_lo,
         'medium': scoring.settings.stochastic_mid,
@@ -70,20 +76,20 @@ def stochastic_modify_line(line, direction, strength='mild', density_zone='neutr
     }.get(strength, 2)
 
     density_mod = scoring.settings.tension_zone_multipliers.get(density_zone, 1.0)
-
-    num_changes = max(1, round(base_changes * density_mod))
+    num_changes = max(1, round(base_changes * density_mod * allowance))
 
     if direction == 'complexify':
         empty_indices = [i for i in indices if steps[i] == '-']
         chosen = random.sample(empty_indices, min(num_changes, len(empty_indices)))
         for i in chosen:
-            steps[i] = random.choice(['x', 'X', 'o', 'O'])
+            steps[i] = random.choice(['x', 'X', 'o', 'O'])  # Add hit
 
     elif direction == 'simplify':
         hit_indices = [i for i in indices if steps[i] in active_hits]
         chosen = random.sample(hit_indices, min(num_changes, len(hit_indices)))
         for i in chosen:
-            steps[i] = '-'
+            steps[i] = '-'  # Remove hit
 
     return ''.join(steps)
+
 
