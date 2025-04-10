@@ -48,37 +48,49 @@ def modify_line_with_randomness(line, rules, instrument):
     #print(f"Modified line ({instrument}): {line}\n")  # Debug
     return line
 
-def stochastic_modify_line(line, direction, strength='mild'):
+def stochastic_modify_line(line, direction, strength='mild', density_zone='neutral'):
     """
     Applies a stochastic modification to a line of drum steps.
-
-    :param line: str, 16-step pattern (e.g., 'X---x---X---x---')
+    :param line: 16-step pattern (e.g., 'X---x---X---x---')
     :param direction: 'complexify' or 'simplify'
     :param strength: 'mild', 'medium', or 'strong'
+    :param density_zone: 'very_sparse' to 'very_dense'
     :return: modified pattern string
     """
+    import random
     active_hits = {'x', 'X', 'o', 'O'}
     steps = list(line)
     indices = list(range(len(steps)))
 
-    # Define probabilities for adding/removing hits (start vars 2,4,6)
-    levels = {
+    # Adjust number of changes based on strength + density_zone
+    base_changes = {
         'mild': scoring.settings.stochastic_lo,
         'medium': scoring.settings.stochastic_mid,
         'strong': scoring.settings.stochastic_hi
-    }
-    num_changes = levels.get(strength, 2)
+    }.get(strength, 2)
+
+    # Modifier based on density_zone
+    density_mod = {
+        'very_sparse': 1.5,
+        'sparse': 1.2,
+        'neutral': 1.0,
+        'dense': 0.8,
+        'very_dense': 0.5
+    }.get(density_zone, 1.0)
+
+    num_changes = max(1, round(base_changes * density_mod))
 
     if direction == 'complexify':
         empty_indices = [i for i in indices if steps[i] == '-']
         chosen = random.sample(empty_indices, min(num_changes, len(empty_indices)))
         for i in chosen:
-            steps[i] = random.choice(['x', 'X', 'o' , 'O'])  # Add soft/hard hit
+            steps[i] = random.choice(['x', 'X', 'o', 'O'])
 
     elif direction == 'simplify':
         hit_indices = [i for i in indices if steps[i] in active_hits]
         chosen = random.sample(hit_indices, min(num_changes, len(hit_indices)))
         for i in chosen:
-            steps[i] = '-'  # Remove hit
+            steps[i] = '-'
 
     return ''.join(steps)
+
