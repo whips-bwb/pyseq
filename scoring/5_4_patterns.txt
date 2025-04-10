@@ -1,5 +1,15 @@
-# Reference: A2
-# Name: BasicRock2
+# Reference: A0
+# Name: blank
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD:
+SD:  
+HH:
+RC:
+
+# Reference: A1
+# Name: BasicRock1
 # Signature: 5/4
 # Bars: 1
 # Resolution: 16

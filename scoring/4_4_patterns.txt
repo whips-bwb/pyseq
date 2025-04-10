@@ -1,10 +1,12 @@
 # Reference: A0
-# Name: TestTracks
+# Name: blank
 # Signature: 4/4
 # Bars: 1
 # Resolution: 16
-BD: ----------------
-SD: X-------X-------
+BD:
+SD:
+HH:
+RC:
     
 # Reference: A1
 # Name: BasicRock1
@@ -17,7 +19,7 @@ HH: X-x-X-x-X-x-X-x-
 RC: --X---x---X---x-
 
 # Reference: A2
-# Name: BasicRock2
+# Name: BasicRock2 4 bars
 # Signature: 4/4
 # Bars: 4
 # Resolution: 16

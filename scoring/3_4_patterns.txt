@@ -1,5 +1,15 @@
+# Reference: A0
+# Name: ternary blank
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD:
+SD:
+HH:
+RC:
+
 # Reference: A1
-# Name: ternary BasicRock1
+# Name: ternary basic
 # Signature: 3/4
 # Bars: 1
 # Resolution: 16
@@ -16,4 +26,54 @@ RC: ------------
 BD: X-------X---
 SD: ----o-----x-
 HH: X---x---x---
+RC: --x---x---x-
+
+# Reference: A3
+# Name: ternary BasicRock2
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X---X-----X-
+SD: ----o-----o-
+HH: X---x---x---
+RC: --x-------x-
+
+# Reference: A4
+# Name: ternary BasicRock3
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X-----X-----
+SD: ----o-----x-
+HH: X-x-x-x-x-x-
+RC: --x---x---x-
+
+# Reference: A5
+# Name: ternary BasicRock4
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X------X----
+SD: ----x-------
+HH: X---x---x---
+RC: ----x---x---
+
+# Reference: A6
+# Name: ternary BasicRock5
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---
+SD: ----o--o----
+HH: X-x---x---x-
+RC: --x-----x---
+
+# Reference: A7
+# Name: ternary BasicRock6
+# Signature: 3/4
+# Bars: 1
+# Resolution: 16
+BD: X-----X----X
+SD: ----o----x--
+HH: X---x---x-x-
 RC: --x---x---x-

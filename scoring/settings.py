@@ -27,7 +27,7 @@ tension_zone_multipliers = {
 instrument_allowances = {
     'HH': 0.2,    # Hi-Hat - only 20% can be modified
     'BD': 0.6,    # Bass Drum - up to 60% can be modified
-    'SD': 0.6,    # Snare Drum - up to 60% can be modified
+    'SD': 0.8,    # Snare Drum - up to 60% can be modified
     'default': 1.0  # Default for other instruments (no restrictions)
 }
     

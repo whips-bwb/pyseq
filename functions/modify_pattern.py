@@ -93,3 +93,52 @@ def stochastic_modify_line(line, direction, strength='mild', density_zone='neutr
     return ''.join(steps)
 
 
+    """
+    # TO TEST , enhanced function with low symplify strength @ instrument protection 
+    def stochastic_modify_line(line, direction, strength='mild', density_zone='neutral', instrument='A1'):
+    '''
+    Applies a stochastic modification to a line of drum steps.
+    :param line: 16-step pattern (e.g., 'X---x---X---x---')
+    :param direction: 'complexify' or 'simplify'
+    :param strength: 'mild', 'medium', or 'strong'
+    :param density_zone: 'very_sparse' to 'very_dense'
+    :param instrument: Name of the instrument being processed (for applying instrument-specific rules)
+    :return: modified pattern string
+    '''
+    import random
+    active_hits = {'x', 'X', 'o', 'O'}
+    steps = list(line)
+    indices = list(range(len(steps)))
+
+    # Adjust number of changes based on strength + density_zone
+    base_changes = {
+        'mild': scoring.settings.stochastic_lo,
+        'medium': scoring.settings.stochastic_mid,
+        'strong': scoring.settings.stochastic_hi
+    }.get(strength, 2)
+
+    density_mod = scoring.settings.tension_zone_multipliers.get(density_zone, 1.0)
+    
+    # Adjust the number of changes based on the TF value itself (for more gradual changes)
+    tf_mod = 1.0 if scoring.settings.tension_factor >= 0.5 else (scoring.settings.tension_factor / 2)  # Less aggressive for high TF
+    num_changes = max(1, round(base_changes * density_mod * tf_mod))
+
+    # If the instrument is the HH (or other key instruments), reduce the number of changes
+    if instrument in ['HH']:
+        num_changes = max(1, num_changes // 2)  # Half the simplification for HH
+
+    if direction == 'complexify':
+        empty_indices = [i for i in indices if steps[i] == '-']
+        chosen = random.sample(empty_indices, min(num_changes, len(empty_indices)))
+        for i in chosen:
+            steps[i] = random.choice(['x', 'X', 'o', 'O'])  # Add soft/hard hit
+
+    elif direction == 'simplify':
+        hit_indices = [i for i in indices if steps[i] in active_hits]
+        chosen = random.sample(hit_indices, min(num_changes, len(hit_indices)))
+        for i in chosen:
+            steps[i] = '-'  # Remove hit
+
+    return ''.join(steps)
+
+    """

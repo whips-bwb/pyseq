@@ -34,4 +34,4 @@ def update_tf():
                 scoring.settings.tension_factor += event['value']
                 scoring.settings.tension_factor = round(scoring.settings.tension_factor, 2)  # Round to 2 decimals
 
-            print(f"{WHITE}⚡ EVENT TRIGGERED {RESET} : {BGyellow} {event['type']} {RESET} at bar {BGyellow} {current_bar} {RESET}              ")
+            print(f"{GREEN}⚡ EVENT TRIGGERED {RESET} : {BGyellow} {event['type']} {RESET} at bar {BGyellow} {current_bar} {RESET}              ")

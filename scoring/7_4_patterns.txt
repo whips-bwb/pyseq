@@ -1,5 +1,15 @@
+# Reference: A0
+# Name: blank
+# Signature: 7/4
+# Bars: 1
+# Resolution: 16
+BD:
+SD:  
+HH:
+RC:
+
 # Reference: A2
-# Name: BasicRock2
+# Name: 7 beats basic
 # Signature: 7/4
 # Bars: 4
 # Resolution: 16

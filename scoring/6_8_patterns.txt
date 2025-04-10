@@ -1,3 +1,13 @@
+# Reference: A0
+# Name: blank
+# Signature: 6/8
+# Bars: 1
+# Resolution: 8
+BD:
+SD:
+HH:
+TR:
+
 # Reference: W1
 # Name: WorldJazz
 # Signature: 6/8
