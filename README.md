@@ -13,9 +13,7 @@ mido module for midi messaging
 that's all folks, enjoy !
 
 TODO :
-- integrate a precount (2bars) by default
-- verify check patterns conformity (to avoid bas numbers of steps)
-- problem with TF changes on the score/sequence when last event (-> applied to the first pattern)
+- verify check patterns conformity (to avoid bad numbers of steps)
 - test & fine tune (modifify params on the fly ....)
 - test with odd signatures 
 - implement modes to change modif logic 

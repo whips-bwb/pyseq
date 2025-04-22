@@ -159,8 +159,6 @@ def print_colored_patterns(patterns):
 
         print("\n" + "-"*40 + "\033[0m")  # Reset color
 
-
-
 # Main function to parse the file and check for errors
 def check_pattern(filename):
     patterns = parse_patterns(filename)

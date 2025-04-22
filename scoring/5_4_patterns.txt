@@ -13,10 +13,20 @@ RC:
 # Signature: 5/4
 # Bars: 1
 # Resolution: 16
-BD: X-------x---x-X-x---
-SD: ----X--X-X--X---o---  
-HH: X-x-x-X-x-x-X-XxXxx-
-RC: --X---x-x-X---x---X-
+BD: X-------------------
+SD: X---x---x---x---x---  
+HH: X-------------------
+RC: X-------------------
+
+# Reference: A2
+# Name: BasicRock1
+# Signature: 5/4
+# Bars: 1
+# Resolution: 16
+BD: X-------------------
+SD: X---x---x---x---x---  
+HH: X-------------------
+RC: X-------------------
 
 # Reference: B1
 # Name: Quintuple Groove 1

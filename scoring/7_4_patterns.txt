@@ -8,7 +8,7 @@ SD:
 HH:
 RC:
 
-# Reference: A2
+# Reference: A1
 # Name: 7 beats basic
 # Signature: 7/4
 # Bars: 4

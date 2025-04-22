@@ -1,5 +1,10 @@
 # Global bar counter
 global_bar_counter = 1
+# precount  
+precount_measures = 2
+# AG , WB or TR (agogo, woodblock or triangle)
+hi_inst = 'AG' 
+lo_inst = 'AG'
 event_index = 0
 tension_factor = 0.0
 previous_tension_factor = 0.0

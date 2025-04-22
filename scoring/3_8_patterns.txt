@@ -1,0 +1,23 @@
+# Reference: A0
+# Name: ternary blank
+# Signature: 3/8
+# Bars: 1
+# Resolution: 16
+BD: 
+SD:
+HH:
+RC:
+
+# Reference: A1
+# Name: ternary basic
+# Signature: 3/8
+# Bars: 1
+# Resolution: 16
+BD: X-----
+SD: ----o-
+HH: Xxxxxx
+RC: ------
+
+
+
+

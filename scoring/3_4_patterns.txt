@@ -22,11 +22,11 @@ RC: ------------
 # Name: ternary BasicRock1
 # Signature: 3/4
 # Bars: 1
-# Resolution: 16
-BD: X-------X---
-SD: ----o-----x-
-HH: X---x---x---
-RC: --x---x---x-
+# Resolution: 8
+BD: X-----
+SD: O-o-o-
+HH: X-x-x-
+RC: --x---
 
 # Reference: A3
 # Name: ternary BasicRock2

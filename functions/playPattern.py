@@ -60,7 +60,20 @@ def play_pattern(pattern, tempo, midi_output_port, channel):
                 current_pattern['instruments'][instrument]['steps'] = new_line
 
     # Play MIDI pattern
-    step_duration = 60 / (tempo * int(current_pattern['metadata']['Signature'].split("/")[1]))  
+    #step_duration = 60 / (tempo * int(current_pattern['metadata']['Signature'].split("/")[1]))  
+    step_duration = 60 / tempo
+    #print(current_pattern['metadata']['Signature'].split("/")[1])
+    if current_pattern['metadata']['Signature'].split("/")[1] == '8':
+        step_duration = step_duration / 2  
+    
+    if current_pattern['metadata']['Resolution'] == 8:
+        step_duration = step_duration / 2
+        
+    if current_pattern['metadata']['Resolution'] == 16:
+        step_duration = step_duration / 4
+        
+    print(step_duration)
+    
     nb_bars = int(current_pattern['metadata']['Bars'])
     num_steps = len(current_pattern['instruments']['SD']['steps'])
 

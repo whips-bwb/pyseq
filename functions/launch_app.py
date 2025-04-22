@@ -10,6 +10,7 @@ from functions.playPattern import play_pattern
 from functions.import_sequence import import_sequence
 from functions.display import *
 from functions.check_tf import update_tf
+from functions.utils import metro_precount
 
 def launch_app():
     # first launch a synth instance (FluidSynth or Qsynth)
@@ -109,6 +110,7 @@ def load_score_and_patterns(time_signature):
 
 def start_sequencer(tempo, time_signature, midi_out_handler, synth_instance, patterns_libs, score):
     hide_cursor()
+    metro_precount(tempo, time_signature, midi_out_handler, scoring.settings.precount_measures)
     # Start an infinite loop to repeat the sequence
     while True:  # Infinite loop to keep repeating the sequence
         try:

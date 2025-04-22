@@ -33,4 +33,5 @@
 
 # exemple with mode changes 
 #main_sequence = ['stoch(0.4)', 'B5' , 'rand(0.7)', '+1' , 'rules(0.9)', 'A0']
-main_sequence = ['stoch(0.4)', '+7' , 'A1' , '-7' , 'A0']
+#main_sequence = ['stoch(0.4)', '+7' , 'A1' , '-7' , 'A0']
+main_sequence = [ 'A1' ]

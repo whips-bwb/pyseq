@@ -13,9 +13,9 @@ RC:
 # Signature: 4/4
 # Bars: 1
 # Resolution: 16
-BD: X-------X-------
-SD: ----o-------X---
-HH: X-x-X-x-X-x-X-x-
+BD: X---------------
+SD: --------X-------
+HH: X---X---X---X---
 RC: --X---x---X---x-
 
 # Reference: A2

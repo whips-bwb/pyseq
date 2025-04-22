@@ -1,0 +1,20 @@
+# Reference: A0
+# Name: blank
+# Signature: 6/4
+# Bars: 1
+# Resolution: 16
+BD:
+SD:
+HH:
+TR:
+
+# Reference: A1
+# Name: Afro Pulse
+# Signature: 6/4
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---X---X---X---
+SD: ----o-----------o-------
+HH: x-x-x-x-x-x-x-x-x-x-x-x-
+RC: ----x-----x-----x-----x-
+

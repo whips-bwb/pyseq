@@ -8,6 +8,16 @@ SD:
 HH:
 TR:
 
+# Reference: A1
+# Name: Afro Pulse
+# Signature: 6/8
+# Bars: 1
+# Resolution: 16
+BD: X---X---X---
+SD: ----o-------
+HH: x-x-x-x-x-x-
+RC: ----x-----x-
+
 # Reference: W1
 # Name: WorldJazz
 # Signature: 6/8
